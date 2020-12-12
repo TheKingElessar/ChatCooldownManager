@@ -19,3 +19,5 @@ This mod uses Minecraft Forge:
  - [Install Forge](https://apexminecrafthosting.com/how-to-install-forge-client-side/)
 
  - [Install Mods](https://apexminecrafthosting.com/how-to-install-mods-on-forge/)
+ 
+Simply drop the [`.jar` mod file](https://github.com/TheKingElessar/ChatCooldownManager/releases/) in your `mods/` directory, and you're off!
