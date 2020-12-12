@@ -10,6 +10,8 @@ This mod checks if you have a rank on Hypixel. If you don't, it keeps you from s
 
 This mod also increases the max chat character count on compatible servers. At the moment, this only works on single-player worlds and Hypixel. To do this, the mod uses a modified version of [Vanilla Enhancements'](https://www.curseforge.com/minecraft/mc-mods/vanilla-enhancements) Chat module.
 
+___ 
+
 #### Installation
 
 This mod uses Minecraft Forge:
