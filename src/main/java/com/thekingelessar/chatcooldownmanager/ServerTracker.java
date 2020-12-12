@@ -32,8 +32,6 @@ public class ServerTracker
         
         if (isHypixel)
         {
-            System.out.println("Server is Hypixel");
-            
             final Timer r = new Timer();
             scheduleRankTester(r);
         }
@@ -80,7 +78,6 @@ public class ServerTracker
             {
                 testingRank = false;
                 hasChatCooldown = true;
-                System.out.println("Has chat cooldown " + hasChatCooldown);
                 chatReceivedEvent.setCanceled(true);
             }
         }
