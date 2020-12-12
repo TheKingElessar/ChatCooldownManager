@@ -1,5 +1,6 @@
 package com.thekingelessar.chatcooldownmanager;
 
+import com.mojang.realmsclient.gui.ChatFormatting;
 import com.thekingelessar.chatcooldownmanager.enhancements_mod.ChatInputExtender;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,6 +15,8 @@ public class ChatCooldownManager
 {
     public static final String MODID = "chatcooldownmanager";
     public static final String VERSION = "1.0";
+    
+    public static final String CCM_PREFIX = ChatFormatting.DARK_PURPLE.toString() + "[CCM] " + ChatFormatting.RESET;
     
     public static boolean isObfuscated;
     @EventHandler

@@ -1,5 +1,6 @@
 package com.thekingelessar.chatcooldownmanager.enhancements_mod;
 
+import com.mojang.realmsclient.gui.ChatFormatting;
 import com.thekingelessar.chatcooldownmanager.ChatCooldownManager;
 import com.thekingelessar.chatcooldownmanager.TickHandler;
 import net.minecraft.client.Minecraft;
@@ -7,10 +8,12 @@ import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.network.play.client.C01PacketChatMessage;
+import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.client.ClientCommandHandler;
 
 import java.io.IOException;
 
+import static com.thekingelessar.chatcooldownmanager.ChatCooldownManager.CCM_PREFIX;
 import static com.thekingelessar.chatcooldownmanager.ServerTracker.hasChatCooldown;
 import static com.thekingelessar.chatcooldownmanager.ServerTracker.isHypixel;
 import static com.thekingelessar.chatcooldownmanager.TickHandler.ticksSinceLastChat;
@@ -60,10 +63,12 @@ public class GuiChatExtended extends GuiChat
                     if (text.charAt(0) == "/".charAt(0))
                     {
                         TickHandler.scheduledCommands.add(text);
+                        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(CCM_PREFIX + ChatFormatting.WHITE + "Command queued: " + ChatFormatting.GRAY + text.substring(0, 10) + "..."));
                     }
                     else
                     {
                         TickHandler.scheduledChat.add(text);
+                        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(CCM_PREFIX + ChatFormatting.WHITE + "Chat message queued: " + ChatFormatting.GRAY + text.substring(0, 10) + "..."));
                     }
                 }
                 else
