@@ -1,5 +1,7 @@
 # ChatCooldownHandler
 
+## User Info
+
 There are two main modules to this mod.
 
 ### Hypixel Chat Cooldown
@@ -16,7 +18,7 @@ At the moment, this only works on single-player worlds and Hypixel. This module 
 
 ___ 
 
-#### Installation
+### Installation
 
 This mod uses Minecraft Forge:
 
@@ -25,3 +27,25 @@ This mod uses Minecraft Forge:
  - [Install Mods](https://apexminecrafthosting.com/how-to-install-mods-on-forge/)
  
 Simply drop the [`.jar` mod file](https://github.com/TheKingElessar/ChatCooldownManager/releases/) in your `mods/` directory, and you're off!
+
+## Developer Info
+
+This mod was originally created because I needed a way for another mod of mine to deal with the Hypixel chat cooldown. Since this is so useful, though, I decided to make it a stand-alone mod.
+
+If you use this mod as a dependency in your mod, you can add your chat messages/commands to the client's queue, too. This mod will take care of everything: checking the server, checking the rank, knowing when to send the message, etc.
+
+To do so, you simply need to add your message to the proper `ArrayList`. You can find them below.
+
+ - `scheduledCommands` is used for commands. It works with both client-side commands and commands sent to the server. The reason that commands and chat messages are stored differently is because Hypixel has a different cooldown for commands.
+
+ - `scheduledChat` is used for chat messages.
+
+```
+package com.thekingelessar.chatcooldownmanager;
+
+public class TickHandler
+{
+    public static List<String> scheduledCommands = new ArrayList<String>();
+    public static List<String> scheduledChat = new ArrayList<String>();
+}
+```

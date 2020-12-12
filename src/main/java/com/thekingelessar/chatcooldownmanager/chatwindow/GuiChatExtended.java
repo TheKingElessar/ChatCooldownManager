@@ -1,4 +1,4 @@
-package com.thekingelessar.chatcooldownmanager.enhancements_mod;
+package com.thekingelessar.chatcooldownmanager.chatwindow;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 import com.thekingelessar.chatcooldownmanager.ChatCooldownManager;
@@ -60,15 +60,16 @@ public class GuiChatExtended extends GuiChat
                 
                 if (!canSendNow)
                 {
+                    String substring = text.substring(0, Math.min(9, text.length()));
                     if (text.charAt(0) == "/".charAt(0))
                     {
                         TickHandler.scheduledCommands.add(text);
-                        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(CCM_PREFIX + ChatFormatting.WHITE + "Command queued: " + ChatFormatting.GRAY + text.substring(0, 10) + "..."));
+                        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(CCM_PREFIX + ChatFormatting.WHITE + "Command queued: " + ChatFormatting.GRAY + substring + "..."));
                     }
-                    else
+                    else // Todo: if command is like /pchat or /gchat, add to scheduledChat list
                     {
                         TickHandler.scheduledChat.add(text);
-                        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(CCM_PREFIX + ChatFormatting.WHITE + "Chat message queued: " + ChatFormatting.GRAY + text.substring(0, 10) + "..."));
+                        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(CCM_PREFIX + ChatFormatting.WHITE + "Chat message queued: " + ChatFormatting.GRAY + substring + "..."));
                     }
                 }
                 else

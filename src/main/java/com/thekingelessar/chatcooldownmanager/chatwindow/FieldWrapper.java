@@ -1,4 +1,4 @@
-package com.thekingelessar.chatcooldownmanager.enhancements_mod;
+package com.thekingelessar.chatcooldownmanager.chatwindow;
 
 import java.lang.reflect.Field;
 

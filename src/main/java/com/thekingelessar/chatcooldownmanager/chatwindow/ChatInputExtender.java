@@ -1,4 +1,4 @@
-package com.thekingelessar.chatcooldownmanager.enhancements_mod;
+package com.thekingelessar.chatcooldownmanager.chatwindow;
 
 import com.thekingelessar.chatcooldownmanager.ChatCooldownManager;
 import net.minecraft.client.Minecraft;

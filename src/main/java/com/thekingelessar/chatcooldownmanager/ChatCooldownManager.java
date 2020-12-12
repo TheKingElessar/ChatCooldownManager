@@ -1,10 +1,9 @@
 package com.thekingelessar.chatcooldownmanager;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import com.thekingelessar.chatcooldownmanager.enhancements_mod.ChatInputExtender;
+import com.thekingelessar.chatcooldownmanager.chatwindow.ChatInputExtender;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
