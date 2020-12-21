@@ -31,9 +31,7 @@ public class ChatInputExtender
             {
                 defaultText = "";
             }
-    
-            System.out.println("default: " + defaultText);
-    
+            
             event.gui = new GuiChatExtended(defaultText);
          //   event.gui.initGui();
         }
