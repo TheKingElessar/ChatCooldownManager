@@ -32,7 +32,10 @@ public class GuiChatExtended extends GuiChat
     
     public GuiChatExtended(String defaultText)
     {
+        super(defaultText);
         this.defaultInputTextField = defaultText;
+        System.out.println("Chat thing started");
+        System.out.println("default in class: " + this.defaultInputTextField);
     }
     
     @Override
@@ -41,6 +44,7 @@ public class GuiChatExtended extends GuiChat
         super.initGui();
         this.inputField.setMaxStringLength(256);
         this.inputField.setText(this.defaultInputTextField);
+        System.out.println("Set to " + this.defaultInputTextField);
     }
     
     @Override
